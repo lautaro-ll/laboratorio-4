@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\.angular",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\Entidades",
+    "\\src\\app\\Vistas",
+    "\\src\\app\\Vistas\\juegos"
+  ],
+  "SelectedNode": "\\src\\app\\Vistas\\juegos\\juegos.component.ts",
+  "PreviewInSolutionExplorer": false
+}

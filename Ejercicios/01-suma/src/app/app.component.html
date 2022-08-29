@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clase-01</title>
+</head>
+<!--1- (app.component.html) Realizar:
+una aplicacion que se le ingresen dos edades en dos cuadro de textos
+edadUno, EdadDos
+mostrar el promedio y la suma en dos cuadros de textos nuevos
+botones "calcular" y "limpiar cuadros de textos"-->
+<!-- 2-( componentes nuevos) Realizar:
+la clase usuario con nombre y clave ,
+el componente "Bienvenido"
+el componente "login"
+el componente "error"
+( dejar los componentes listos)
+opcional: hacer ruteo -->
+<body>
+  <label for="iEdadUno">1° Edad</label><br />
+  <input id="iEdadUno" type="text" [(ngModel)]="edadUno" /><br />
+  <label for="iEdadDos">2° Edad</label><br />
+  <input id="iEdadDos" type="text" [(ngModel)]="edadDos" /><br />
+  <hr />
+  <label for="iSuma">Suma</label><br />
+  <input id="iSuma" type="text" disabled [value]="suma" /><br />
+  <label for="iPromedio">Promedio</label><br />
+  <input id="iPromedio" type="text" disabled [value]="promedio" /><br />
+  <br />
+  <input type="button" value="Calcular" (click)="calcular()">
+  <input type="button" value="Limpiar" (click)="limpiar()">
+</body>
+</html>
