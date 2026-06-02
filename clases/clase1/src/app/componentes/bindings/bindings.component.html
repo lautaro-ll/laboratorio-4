@@ -1,0 +1,27 @@
+<!--
+        DATA BINDING
+    {{}} Interpolation: controlador -> vista
+    [] Property binding: controlador -> vista
+    () Event Binding: vista -> controlador
+    [()] Two Way Binding:
+-->
+<h2>{{name}}</h2>
+
+<!-- 
+    para que busque los valores de las propiedades en el codigo se usan los []
+    para que levante los eventos de angular en el codigo se usan los eventos sin el on (onclick -> click) y los ()
+    el $event es un wrapper nativo de angular para poder levantar el evento, si el evento no recibe un argumento se deja vacio 
+-->
+
+<input type="button" [value]="label" (click)="ponerNumRand($event)">
+
+<hr>
+<!-- 
+    [()] -> le dicen banana box
+    para usar el ngModel necesito importar el FormsModule en el modulo, en este caso app.module.ts
+    en este caso si cambio el valor del input cambia la variable y si cambia la variable cambia el valor del input
+-->
+<input type="text" [(ngModel)]="apellido" placeholder="Ingrese apellido">
+
+<input type="button" value="limpiar" (click)="limpiarApellido()">
+<p>{{apellido}}</p>

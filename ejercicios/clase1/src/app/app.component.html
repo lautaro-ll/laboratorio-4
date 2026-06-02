@@ -1,0 +1,44 @@
+<!-- 
+    1- (app.component.html) Realizar:
+    Una aplicación que se le ingresen dos edades en dos cuadro de textos
+    edadUno, EdadDos
+    mostrar el promedio y la suma en dos cuadros de textos nuevos
+    botones "calcular" y "limpiar cuadros de textos"
+
+    2-( componentes nuevos) Realizar:
+    la clase usuario con nombre y clave ,
+    el componente "Bienvenido"
+    el componente "login"
+    el componente "error"
+    ( dejar los componentes listos)
+    opcional: hacer ruteo
+-->
+<div class="row pt-5">
+  <div class="col-5"></div>
+  <div class="col-2">
+    <div class="mb-3">
+      <label for="" class="form-label">Edad Uno</label>
+      <input type="number" class="form-control" [(ngModel)]="edadUno">
+      <small id="errEdadUno" class="form-text text-danger">{{errorUno}}</small>
+    </div>
+    
+    <div class="mb-3">
+      <label for="" class="form-label">Edad Dos</label>
+      <input type="number" class="form-control" [(ngModel)]="edadDos">
+      <small id="errEdadDos" class="form-text text-danger">{{errorDos}}</small>
+    </div>
+    
+    <div class="mb-3">
+      <label for="" class="form-label">Suma</label>
+      <input type="number" class="form-control" [value]="suma" disabled>
+    </div>
+
+    <div class="mb-3">
+      <label for="" class="form-label">Promedio</label>
+      <input type="number" class="form-control" [value]="promedio" disabled>
+    </div>    
+    
+    <button type="button" class="btn btn-primary m-1" (click)="calcular()">Calcular</button>
+    <button type="button" class="btn btn-danger m-1" (click)="limpiar()">Limpiar</button>
+  </div>
+</div>
