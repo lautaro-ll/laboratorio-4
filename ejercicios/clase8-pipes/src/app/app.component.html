@@ -1,0 +1,53 @@
+<router-outlet></router-outlet>
+
+<h1 directivaResaltar>Directivas - resalta en default</h1>
+
+<h4 directivaResaltar [appHighlight]="'green'">Resalta en verde</h4>
+<h4 directivaResaltar [appHighlight]="'blue'">Resalta en azul</h4>
+<h4 directivaResaltar [appHighlight]="'#FFFF00'">Resalta en #FFFF00</h4>
+
+<hr />
+<!--
+    https://angular.io/guide/pipes
+-->
+<h1>Pipes:</h1>
+
+<hr>
+<small>{{minusculas}}</small>
+<h4>Transformar a mayusculas: {{ minusculas | uppercase }}</h4>
+
+<hr>
+<small>{{mayusculas}}</small>
+<h4>Transformar a minusculas: {{ mayusculas | lowercase }}</h4>
+<!-- 
+    Para pasar valores, usamos los ":" y luego el valor que le queremos agregar. Si queremos seguir agregando valores, agregamos ":" y otro valor o variable. ej: {{ valorInicial | miPipe : "valor1" : "valor2" }}
+Todos estos parámetros se almacenan en el array "...args" de la función transform.
+-->
+
+<hr>
+<small>{{precio}}</small>
+<h4>Transformar a moneda: {{ precio | currency : "ARS" }}</h4>
+
+<hr>
+<small>{{fecha}}</small>
+<h4>Transformar a fecha: {{ fecha | date : "dd-MM-YYYY" }}</h4>
+
+<hr>
+<small>{{pi}}</small>
+<h4>Transformar decimales: {{ pi | number: "2.1-3" }}</h4>
+
+<hr>
+<small>{{porcentual}}</small>
+<h4>Transformar porcentaje: {{ porcentual | percent: "2.0-5" }}</h4>
+
+<hr>
+<small>{{fecha}}</small>
+<h4>Transformar tiempo: {{ fecha | time: "s" }}</h4>
+
+<hr>
+<small>{{textaso}}</small>
+<h4>Transformar texto largo: {{ textaso | long }}</h4>
+
+<hr>
+<small>{{dni}}</small>
+<h4>Transformar documento: {{ dni | custom }}</h4>
